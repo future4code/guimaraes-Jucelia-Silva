@@ -1,0 +1,37 @@
+                div {
+                    background-color: rgb(238, 230, 238);
+                }
+                
+                h1 {
+                    background-color: rgb(212, 194, 207);
+                    padding: 5%;
+                }
+                
+                * {
+                    margin: 0;
+                }
+                
+                header,
+                section,
+                footer {
+                    text-align: center;
+                }
+                
+                header {
+                    background-color: bisque;
+                    padding: 2%;
+                }
+                
+                header h1,
+                header p {
+                    justify-content: center;
+                }
+                
+                p {
+                    letter-spacing: 0.4vh;
+                    padding: 2%;
+                }
+                
+                div h2 {
+                    background-color: blanchedalmond;
+                }
