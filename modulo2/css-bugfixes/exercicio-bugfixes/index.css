@@ -70,7 +70,7 @@ div img {
     background-color: #2274a5;
     color: white;
     padding-top: 30px;
-    margin-bottom: 30px;
+    list-style-position: inside;
 }
 
 #container-de-descricao>ol {
@@ -107,6 +107,15 @@ div:last-child {
 
 table {
     width: 60%;
+}
+
+td {
+    text-align: center;
+}
+
+td img {
+    width: 60px;
+    margin: auto -0.5vw;
 }
 
 td button {
