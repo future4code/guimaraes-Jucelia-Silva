@@ -69,8 +69,7 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
-    padding-top: 30px;
-    list-style-position: inside;
+    padding-top: 5%;
 }
 
 #container-de-descricao>ol {
@@ -129,6 +128,11 @@ td button {
 .container-do-search {
     margin-top: 20px;
     height: 100px;
+}
+
+.icone {
+    height: 4vh;
+    padding: 0 auto;
 }
 
 #back-button {
