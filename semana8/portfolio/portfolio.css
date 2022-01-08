@@ -1,5 +1,68 @@
-body {
+* {
     margin: 0%;
     padding: 0%;
-    background-color: rgb(252, 228, 228);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background: url("img/background-2819026_1280.jpg") no-repeat top center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.box {
+    background: #eee;
+    padding: 4rem;
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.16);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img {
+    text-align: center;
+}
+
+.profile span {
+    font-size: 24px;
+}
+
+.profile p {
+    font-size: 18px;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociais li {
+    margin-right: 1rem;
 }
