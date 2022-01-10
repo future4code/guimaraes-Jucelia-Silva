@@ -3,6 +3,10 @@
     padding: 0%;
 }
 
+.header-container {
+    height: 150vh;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -13,6 +17,7 @@ li {
 }
 
 body {
+    padding: 15vh;
     font-family: 'Source Code Pro', monospace;
     background: url("img/background-2819026_1280.jpg") no-repeat top center;
     background-attachment: fixed;
@@ -65,4 +70,39 @@ body {
 
 .redes-sociais li {
     margin-right: 1rem;
+}
+
+.menu-items {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50vh;
+    display: flex;
+    padding: 10px;
+}
+
+.menu-items ul {
+    list-style-type: none;
+}
+
+.menu-items ul li a {
+    margin: 15px;
+    color: rgb(14, 13, 13);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 15px;
+    display: block;
+    text-decoration: underline overline;
+    color: rgb(12, 11, 11);
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(15, 12, 13);
 }
