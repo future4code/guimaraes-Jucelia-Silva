@@ -1,18 +1,26 @@
 import React from "react";
 import axios from "axios";
 
+const urlNovoUsuario = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
 
+
+const headers = {
+  headers: {
+    Authorization: "Jucelia-Xavier-guimaraes"
+
+  }
+}
 export default class Input extends React.Component {
     state = {
         inputNome: "",
         inputEmail: "",
     };
 
-    addNome = (e) => {
+    addInputNome = (e) => {
         this.setState({ inputNome: e.target.value });
     };
 
-    addEmail = (e) => {
+    addInputEmail = (e) => {
         this.setState({ inputEmail: e.target.value });
     };
 
@@ -23,24 +31,16 @@ export default class Input extends React.Component {
 
         };
 
-        axios
-      .post(
-        "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
-        body,
-        {
-          headers: {
-            Authorization: "Jucelia-Xavier-guimaraes",
-          },
-        }
-      )
-      .then((res) => {
-        alert(" Novo usuário criado com sucesso!");
-      })
-      .catch((err) => {
-        alert("Erro ao criar o novo usuário!");
-      }); 
-
+          axios
+            .post(urlNovoUsuario, body, headers)
+            .then((res) => {
+              alert('usuario adicionado');
+            })
+            .catch((err) => {
+              alert('Erro ao criar o novo usuário!');
+            });
     };
+      
 
 
     render() {
@@ -48,17 +48,11 @@ export default class Input extends React.Component {
             <div>
                 <p>Criar Usuário</p>
                 <div>
-                    <input 
-                    placeholder="nome"
-                    value={this.state.inputNome}
-                    onChange={this.addNome}
+                    <input type="text" placeholder="Nome" value={this.inputNome} onChange={this.addInputNome}
                     />
-                     <input 
-                    placeholder="email"
-                    value={this.state.inputEmail}
-                    onChange={this.addEmail}
+                     <input type="email" placeholder="email" value={this.inputEmail} onChange={this.addInputEmail}
                     />
-                    <button onClick={this.novoUser}> Novo </button>
+                    <button onClick={this.props.onClickNovoUser} value={this.state.inputNome}>Nova tela</button>
                 </div>
 
             </div>

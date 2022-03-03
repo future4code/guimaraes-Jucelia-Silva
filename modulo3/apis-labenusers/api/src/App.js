@@ -8,11 +8,11 @@ import Lista from "./components/Lista";
 
 export default class App extends React.Component {
   state = {
-    page: true,
+    page: false,
   };
 
   novaPage = () => {
-    this.setState({ page: !this.state.page });
+    this.setState({ page: true});
   };
   
 
