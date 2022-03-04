@@ -1,0 +1,32 @@
+.pequenocard-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    height: 8vh;
+    width: 40vw;
+    margin-top: 1vh;
+}
+
+.pequenocard-container>div{
+    display: flex;
+}
+
+.pequenocard-container > img {
+    width: 23px;
+    margin-right: 10px;
+    margin-left: 1vh;
+    border-radius: 50%;
+    display: flex;
+ 
+
+}
+
+.pequenocard-container>div>h4 {
+    padding: 0 .5vh;
+}
+
+.pequeno-card-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
