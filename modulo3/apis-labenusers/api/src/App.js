@@ -1,31 +1,37 @@
-import React from "react";
-import axios from "axios";
-import Input from "./components/Input";
-import Lista from "./components/Lista";
-
-
-
+import React  from "react";
+import TelaCadastro from "./components/TelaCadastro";
+import TelaLista from "./components/TelaLista"
 
 export default class App extends React.Component {
   state = {
-    page: false,
-  };
+    tela: "cadastro"
+  }
 
-  novaPage = () => {
-    this.setState({ page: true});
-  };
-  
+  escolheTela = () => {
+    switch(this.state.tela){
+       case "cadastro":
+         return <TelaCadastro irParaLista={this.irParaLista} />
+        case "lista":
+          return <TelaLista irParaCadastro={this.irParaCadastro}/>
+        default:
+          return <p>Opa, algo deu errado</p>
+    }
+  }
+
+  irParaCadastro = () => {
+    this.setState({tela: "cadastro"})
+  }
+
+  irParaLista = () => {
+    this.setState({tela: "lista"})
+  }
 
 
-
- render() {
+  render(){
   return (
-    <>
-    <h2>Labenuser</h2>
-    <button onClick={this.novaPage}>Lista com o nome do usuário</button>
-    <Input />
-    <Lista />
-    </>
-   );
- }
+    <div >
+      {this.escolheTela()}
+    </div>
+  );
+  }
 }
