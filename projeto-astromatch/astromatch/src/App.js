@@ -45,12 +45,14 @@ function App() {
 
 
   return (
-    <div >
+    <div>
     
-      {mostrarTela()}
+               {mostrarTela()} 
 
-      <button onClick={reseta}>resetar</button>
+             <button  onClick={reseta}>Limpar</button> 
+
     </div>
+
   );
 
 

@@ -1,5 +1,34 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import styled from "styled-components";
+
+const DivConteiner = styled.div`
+margin: 1vh auto;
+padding: 5vh 1vh;
+width: 20vw;
+height: 8vh
+
+`;
+
+const DivMatch = styled.div`
+display: flex;
+margin: 0 auto;
+font-size: 26px;
+
+`;
+
+const Photo = styled.img`
+width: 150px;
+border-radius: 10px;
+`;
+
+const Name = styled.p`
+margin: auto 1vh
+`;
+
+const DivAge = styled.p`
+color: red;
+`;
 
 
 function TelaMatches(props) {
@@ -22,19 +51,22 @@ function TelaMatches(props) {
         <div>
             {listaMatches.map((match) => {
                 return (
-                    <div>
-                        <div>
-                          {/* <img src={match.photo} /> */}
-                          <div>{match.name}</div>
-                          <div>{match.age}</div>
-                        </div>
-                    </div>
+                  <h2>
+                    <DivConteiner>
+                        <DivMatch>
+                          <Photo src={match.photo}/>
+                          <Name>{match.name}</Name>
+                          <DivAge>{match.age}</DivAge>
+                        </DivMatch>
+                    </DivConteiner>
+                    </h2>
                 );
             })}
+            <br />
 
-            <div>
+               <div>
                 <button onClick={props.onChangeTela}>Voltar</button>
-            </div>
+              </div>
         </div>
     );
              
@@ -42,5 +74,3 @@ function TelaMatches(props) {
 
 
 export default TelaMatches;
-
-
