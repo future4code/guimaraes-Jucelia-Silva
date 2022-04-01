@@ -1,10 +1,13 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+import Router from "./routes/Router";
 
+function App() {
+  return  (
+    
+     <Router />
+    
 
-const App = () => {
-
-  c
-
-
+  )
 }
+
+export default App;
