@@ -8,4 +8,4 @@ const LisTripsPage = () => {
     );
 }
 
-export default LisTripsPage;
+export default LisTripsPage
