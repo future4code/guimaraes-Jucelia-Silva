@@ -1,4 +1,17 @@
 import styled from "styled-components";
+// import img from "./Img/Viagem-a-lua-PNG.png"
+
+
+
+// export const StyledImg = styled.div`
+//  width: 150vw;
+//   height: 50vh;
+//   background-image: url(${img});
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   padding-top: 100px;
+
+// `;
 
 export const H1 = styled.h1`
 color: red;
@@ -20,4 +33,8 @@ padding: 16px;
 margin-top: 15px;
 border-radius: 50px;
 
+`; 
+
+export const TripButton = styled.button`
+display: flex;
 `;
