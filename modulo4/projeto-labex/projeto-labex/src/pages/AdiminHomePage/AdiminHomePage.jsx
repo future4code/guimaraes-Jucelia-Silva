@@ -1,22 +1,22 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const LoginPage = () => {
+export default function AdminHomePage() {
+  const navigate = useNavigate();
+  const goToCreateTripAdmin = () => navigate("/admin/trips/create");
+  const goToTripDetails = () => navigate("/admin/trips/:id");
 
-    const navigate = useNavigate()
-    const goToHomePage = () => navigate(-2) 
-    const createTrip = () => navigate('createTrip')
+  const goToHomePage = () => navigate(-2);
 
+  return (
+    <div>
+      <h1>AdminHomePage</h1>
 
-
-    return(
-        <div>
-        <h1>AdiminHomePage</h1>
-        <button onClick={goToHomePage}>Voltar</button>
-        <button onClick={createTrip}>Criar uma viagem</button>
-        <button onClick={goToHomePage}>Logout</button>
-        </div>
-    );
+      <p>Destino Admin </p>
+     
+      <button onClick={goToCreateTripAdmin}>Viagens</button>
+      <button onClick={goToTripDetails}>Ver Detalhes</button>
+      <button onClick={goToHomePage}>logout</button>
+    </div>
+  );
 }
-
-export default LoginPage;
