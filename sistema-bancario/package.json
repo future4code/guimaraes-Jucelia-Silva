@@ -1,0 +1,33 @@
+{
+  "name": "guimaraes-jucelia-silva",
+  "version": "1.0.0",
+  "description": "Alunos(as), sejam bem-vindos(as)!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev ./src/index.ts",
+    "start": "tsc && node ./build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/future4code/guimaraes-Jucelia-Silva.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/future4code/guimaraes-Jucelia-Silva/issues"
+  },
+  "homepage": "https://github.com/future4code/guimaraes-Jucelia-Silva#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.42",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  }
+}
