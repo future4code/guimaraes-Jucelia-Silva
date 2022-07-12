@@ -1,3 +1,5 @@
-import app from './app'
-import createCharacter from './endpoints/createCharacter'
-import getAllCharacters from './endpoints/getAllCharacters'
+GET http://localhost:3003/orderproducts?name=
+Content-Type: application/json
+###
+GET http://localhost:3003/users/1/purchases
+Content-Type: application/json
