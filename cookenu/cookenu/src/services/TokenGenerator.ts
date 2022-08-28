@@ -1,23 +1,24 @@
-import * as jwt from 'jsonwebtoken'
-import { AuthenticationData } from '../model/user'
+import * as jwt from "jsonwebtoken";
+import { authenticationData } from "../model/user";
 
-export class TokenGenerator {
+const expiresIn = "50min"
 
-    public generateToken = (id: string) => {
-        const token = jwt.sign(
-            { id },
+export default class Authenticator {
+    generateToken = (payload: authenticationData) => {
+        return jwt.sign(
+            payload,
             process.env.JWT_KEY as string,
-            { expiresIn: "1h" }
-         )
-        return token 
+            {
+                expiresIn
+            }
+        )
     }
 
-    public tokenData = (token: string): AuthenticationData => {
-        const payload = jwt.verify(
-            token,
-            process.env.JWT_KEY as string
-        ) as jwt.JwtPayload
+    getData = (token: string) => {
+        const tokenData = jwt.verify(
+            token, process.env.JWT_KEY as string,
+        )
 
-        return {id: payload.id as string}
+        return tokenData as authenticationData
     }
 }

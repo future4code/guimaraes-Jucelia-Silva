@@ -1,6 +1,6 @@
 import { v4 } from "uuid";
 
-export class IdGenerator {
+export function generateId(): string {
 
-    public generateId = () => v4() 
+   return v4(); 
 }
