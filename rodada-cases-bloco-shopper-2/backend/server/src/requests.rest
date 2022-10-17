@@ -1,0 +1,57 @@
+
+GET http://localhost:3306/products/id
+Content-Type: application/json
+
+{
+    "id": "1" 
+}
+
+
+GET  http://localhost:3003/products?page=3
+      
+      
+
+###
+GET http://localhost:3003/products/18
+
+
+###
+GET http://localhost:3003/cart
+
+
+###
+PUT http://localhost:3003/orderItem/37902373-eec7-409b-85d7-ca6e39cb51b2
+Content-Type: application/json
+
+{
+    "amount": 111,
+    "totalPrice": 100.00
+}
+
+
+###
+DELETE  http://localhost:3003/orderItem/95679f1f-16d0-4718-9ee2-0ed413a12eb2
+
+###
+POST http://localhost:3003/orderItem
+Content-Type: application/json
+
+{
+                    "prodId": 55,
+                    "prodName": "VELA SANTA CRUZ BRANCA C/8 25G",
+                    "amount": 1,
+                    "prodPrice": 5.89
+                }
+
+
+
+###
+PUT http://localhost:3003/products/18
+Content-Type: application/json
+
+{
+    "orderAmount": 300
+}
+
+###
+PUT http://localhost:3003/order/c04180c9-b6cb-419e-b166-5947caf49cb0
