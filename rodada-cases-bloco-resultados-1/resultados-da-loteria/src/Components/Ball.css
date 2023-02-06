@@ -1,0 +1,27 @@
+li{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 106px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.1);
+    margin-right: 35px;
+    margin-top: 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 27px;
+    list-style: 32px;
+    
+}
+
+@media (max-width){
+    li{
+        width: 76px;
+        height: 76px;
+    }
+
+    
+
+    
+}
